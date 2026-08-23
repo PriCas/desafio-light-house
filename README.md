@@ -48,8 +48,13 @@ O objetivo é demonstrar como você organiza e comunica insights a partir dos da
 ## PREPARAÇÃO
     Isolar as dependências do projeto LH Nautical com a criação da venv para realização da análise 
     exploratória inicial nas tabelas.
+
 ## PIPELINE DE ENGENHARIA DE DADOS
+
 # Módulo: Gerador Automático de Schema DDL (PostgreSQL)
     Questão: 2.1 (Geração de DDL a partir de arquivos CSV)
+
 # Módulo: Carga de Dados Brutos no Banco PostgreSQL (Ingestion)
     Questão: 3.1 (Carregamento automatizado de arquivos CSV na Camada Raw/Bronze)
+
+# 
