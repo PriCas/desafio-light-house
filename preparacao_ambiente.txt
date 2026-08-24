@@ -1,0 +1,23 @@
+PREPARAÇÃO DO AMBIENTE:
+
+
+As instruções a seguir mostram como o ambiente foi configurado, com 
+o objetivo de isolar as dependências do projeto LH Nautical.
+
+#CRIAR O AMBIENTE venv.
+
+NO POWERSHELL DO VS CODE
+'python -m venv venv' 
+
+ATIVAR (KILL TERMINAL E ACESSAR NOVAMENTE)	
+'venv\Scripts\activate'	
+
+IMPORTAR TESTAR PACOTE .MATH NO PYTHON
+'import math'
+'math.sqrt(25)'
+
+IMPORTAR MÓDULO DATETIME PARA ANÁLISE DAS DATAS
+'from datetime import datetime'
+
+IMPORTAR MÓDULO OS PARA IDENTIFICAÇÃO CORRETA DO ENDEREÇO DA PASTA
+'import os'
