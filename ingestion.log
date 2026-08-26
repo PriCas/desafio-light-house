@@ -1,0 +1,398 @@
+2026-08-13 00:35:50,806 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 11:59:26,077 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 12:01:01,495 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 13:15:24,731 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 13:16:07,510 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 13:20:12,756 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 13:40:56,432 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 13:40:56,595 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-13 13:40:56,606 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-13 13:40:56,644 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-13 13:40:56,706 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-13 13:40:56,836 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-13 13:40:56,855 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-13 13:40:56,899 [ERROR] ❌ Falha ao carregar a tabela 'fiscal_invoices': ERRO:  o valor "92111513888805458765558030542916020723242655" está fora do intervalo para o tipo de dados bigint
+CONTEXT:  COPY fiscal_invoices, linha 2, coluna nfe_access_key: "92111513888805458765558030542916020723242655"
+
+2026-08-13 13:40:57,036 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-13 13:40:57,180 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-13 13:40:57,212 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-13 13:40:59,466 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-13 13:41:01,077 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-13 13:41:01,902 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-13 13:41:01,961 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-13 13:41:02,023 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-13 13:41:02,045 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-13 13:41:02,091 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-13 13:41:03,082 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-13 13:41:03,112 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-13 13:41:03,168 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-13 13:41:03,208 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-13 13:41:05,206 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-13 13:41:05,228 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-13 13:41:05,286 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-13 13:41:05,286 [INFO] 
+============================================================
+2026-08-13 13:41:05,286 [INFO] EXECUTANDO VALIDACÃO DA QUESTÃO 3.2...
+2026-08-13 13:41:05,287 [INFO] ============================================================
+2026-08-13 13:41:05,366 [INFO]   • customers: 2,000 linhas
+2026-08-13 13:41:05,369 [INFO]   • orders: 48,998 linhas
+2026-08-13 13:41:05,378 [INFO]   • order_items: 147,320 linhas
+2026-08-13 13:41:05,384 [INFO]   • payments: 53,546 linhas
+2026-08-13 13:41:05,385 [INFO] ------------------------------------------------------------
+2026-08-13 13:41:05,385 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-13 13:41:05,385 [INFO] ============================================================
+
+2026-08-13 13:41:05,385 [INFO] Conexão com o banco de dados encerrada.
+2026-08-13 14:55:47,886 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 14:55:48,036 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-13 14:55:48,050 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-13 14:55:48,065 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-13 14:55:48,088 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-13 14:55:48,153 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-13 14:55:48,167 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-13 14:55:48,218 [ERROR] ❌ Falha ao carregar a tabela 'fiscal_invoices': ERRO:  o valor "92111513888805458765558030542916020723242655" está fora do intervalo para o tipo de dados bigint
+CONTEXT:  COPY fiscal_invoices, linha 2, coluna nfe_access_key: "92111513888805458765558030542916020723242655"
+
+2026-08-13 14:55:48,331 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-13 14:55:48,388 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-13 14:55:48,401 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-13 14:55:49,834 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-13 14:55:50,610 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-13 14:55:51,258 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-13 14:55:51,298 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-13 14:55:51,335 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-13 14:55:51,386 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-13 14:55:51,427 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-13 14:55:51,493 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-13 14:55:51,556 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-13 14:55:51,582 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-13 14:55:51,630 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-13 14:55:52,803 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-13 14:55:52,814 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-13 14:55:52,828 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-13 14:55:52,828 [INFO] 
+============================================================
+2026-08-13 14:55:52,828 [INFO] EXECUTANDO VALIDACÃO DA QUESTÃO 3.2...
+2026-08-13 14:55:52,829 [INFO] ============================================================
+2026-08-13 14:55:52,928 [INFO]   • customers: 2,000 linhas
+2026-08-13 14:55:52,933 [INFO]   • orders: 48,998 linhas
+2026-08-13 14:55:52,942 [INFO]   • order_items: 147,320 linhas
+2026-08-13 14:55:52,946 [INFO]   • payments: 53,546 linhas
+2026-08-13 14:55:52,946 [INFO] ------------------------------------------------------------
+2026-08-13 14:55:52,946 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-13 14:55:52,947 [INFO] ============================================================
+
+2026-08-13 14:55:52,947 [INFO] Conexão com o banco de dados encerrada.
+2026-08-13 14:56:54,442 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 14:56:54,546 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-13 14:56:54,567 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-13 14:56:54,594 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-13 14:56:54,613 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-13 14:56:54,659 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-13 14:56:54,673 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-13 14:56:54,718 [ERROR] ❌ Falha ao carregar a tabela 'fiscal_invoices': ERRO:  o valor "92111513888805458765558030542916020723242655" está fora do intervalo para o tipo de dados bigint
+CONTEXT:  COPY fiscal_invoices, linha 2, coluna nfe_access_key: "92111513888805458765558030542916020723242655"
+
+2026-08-13 14:56:54,750 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-13 14:56:54,776 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-13 14:56:54,813 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-13 14:56:56,127 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-13 14:56:57,125 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-13 14:56:58,188 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-13 14:56:58,209 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-13 14:56:58,246 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-13 14:56:58,269 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-13 14:56:58,319 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-13 14:56:58,380 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-13 14:56:58,407 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-13 14:56:58,438 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-13 14:56:58,496 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-13 14:57:00,200 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-13 14:57:00,228 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-13 14:57:00,249 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-13 14:57:00,249 [INFO] 
+============================================================
+2026-08-13 14:57:00,249 [INFO] EXECUTANDO VALIDACÃO DA QUESTÃO 3.2...
+2026-08-13 14:57:00,249 [INFO] ============================================================
+2026-08-13 14:57:00,454 [INFO]   • customers: 2,000 linhas
+2026-08-13 14:57:00,462 [INFO]   • orders: 48,998 linhas
+2026-08-13 14:57:00,494 [INFO]   • order_items: 147,320 linhas
+2026-08-13 14:57:00,504 [INFO]   • payments: 53,546 linhas
+2026-08-13 14:57:00,504 [INFO] ------------------------------------------------------------
+2026-08-13 14:57:00,506 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-13 14:57:00,506 [INFO] ============================================================
+
+2026-08-13 14:57:00,507 [INFO] Conexão com o banco de dados encerrada.
+2026-08-13 14:58:24,632 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 14:58:24,764 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-13 14:58:24,790 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-13 14:58:24,804 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-13 14:58:24,814 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-13 14:58:24,869 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-13 14:58:24,881 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-13 14:58:24,932 [ERROR] ❌ Falha ao carregar a tabela 'fiscal_invoices': ERRO:  o valor "92111513888805458765558030542916020723242655" está fora do intervalo para o tipo de dados bigint
+CONTEXT:  COPY fiscal_invoices, linha 2, coluna nfe_access_key: "92111513888805458765558030542916020723242655"
+
+2026-08-13 14:58:24,961 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-13 14:58:24,991 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-13 14:58:25,001 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-13 14:58:26,480 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-13 14:58:27,625 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-13 14:58:28,216 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-13 14:58:28,244 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-13 14:58:28,295 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-13 14:58:28,317 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-13 14:58:28,381 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-13 14:58:28,438 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-13 14:58:28,463 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-13 14:58:28,489 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-13 14:58:28,526 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-13 14:58:30,677 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-13 14:58:30,690 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-13 14:58:30,726 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-13 14:58:30,726 [INFO] 
+============================================================
+2026-08-13 14:58:30,726 [INFO] EXECUTANDO VALIDACÃO DA QUESTÃO 3.2...
+2026-08-13 14:58:30,727 [INFO] ============================================================
+2026-08-13 14:58:30,904 [INFO]   • customers: 2,000 linhas
+2026-08-13 14:58:30,908 [INFO]   • orders: 48,998 linhas
+2026-08-13 14:58:30,917 [INFO]   • order_items: 147,320 linhas
+2026-08-13 14:58:30,921 [INFO]   • payments: 53,546 linhas
+2026-08-13 14:58:30,921 [INFO] ------------------------------------------------------------
+2026-08-13 14:58:30,921 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-13 14:58:30,922 [INFO] ============================================================
+
+2026-08-13 14:58:30,922 [INFO] Conexão com o banco de dados encerrada.
+2026-08-13 15:03:04,382 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 15:03:04,585 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-13 15:03:04,595 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-13 15:03:04,609 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-13 15:03:04,628 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-13 15:03:04,665 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-13 15:03:04,679 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-13 15:03:04,726 [ERROR] ❌ Falha ao carregar a tabela 'fiscal_invoices': ERRO:  o valor "92111513888805458765558030542916020723242655" está fora do intervalo para o tipo de dados bigint
+CONTEXT:  COPY fiscal_invoices, linha 2, coluna nfe_access_key: "92111513888805458765558030542916020723242655"
+
+2026-08-13 15:03:04,755 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-13 15:03:04,784 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-13 15:03:04,798 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-13 15:03:06,273 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-13 15:03:07,285 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-13 15:03:08,049 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-13 15:03:08,099 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-13 15:03:08,142 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-13 15:03:08,178 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-13 15:03:08,232 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-13 15:03:08,282 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-13 15:03:08,302 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-13 15:03:08,329 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-13 15:03:08,372 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-13 15:03:10,212 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-13 15:03:10,225 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-13 15:03:10,251 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-13 15:03:10,251 [INFO] 
+============================================================
+2026-08-13 15:03:10,251 [INFO] EXECUTANDO VALIDACÃO DA QUESTÃO 3.2...
+2026-08-13 15:03:10,252 [INFO] ============================================================
+2026-08-13 15:03:10,337 [INFO]   • customers: 2,000 linhas
+2026-08-13 15:03:10,340 [INFO]   • orders: 48,998 linhas
+2026-08-13 15:03:10,349 [INFO]   • order_items: 147,320 linhas
+2026-08-13 15:03:10,353 [INFO]   • payments: 53,546 linhas
+2026-08-13 15:03:10,353 [INFO] ------------------------------------------------------------
+2026-08-13 15:03:10,353 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-13 15:03:10,353 [INFO] ============================================================
+
+2026-08-13 15:03:10,353 [INFO] Conexão com o banco de dados encerrada.
+2026-08-13 15:06:30,465 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 15:06:30,585 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-13 15:06:30,596 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-13 15:06:30,611 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-13 15:06:30,634 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-13 15:06:30,701 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-13 15:06:30,714 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-13 15:06:30,767 [ERROR] ❌ Falha ao carregar a tabela 'fiscal_invoices': ERRO:  o valor "92111513888805458765558030542916020723242655" está fora do intervalo para o tipo de dados bigint
+CONTEXT:  COPY fiscal_invoices, linha 2, coluna nfe_access_key: "92111513888805458765558030542916020723242655"
+
+2026-08-13 15:06:30,907 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-13 15:06:30,956 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-13 15:06:30,966 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-13 15:06:32,212 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-13 15:06:33,359 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-13 15:06:33,970 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-13 15:06:34,015 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-13 15:06:34,044 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-13 15:06:34,061 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-13 15:06:34,470 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-13 15:06:34,517 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-13 15:06:34,534 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-13 15:06:34,559 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-13 15:06:34,597 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-13 15:06:36,293 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-13 15:06:36,302 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-13 15:06:36,362 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-13 15:06:36,362 [INFO] 
+============================================================
+2026-08-13 15:06:36,362 [INFO] EXECUTANDO VALIDACÃO DA QUESTÃO 3.2...
+2026-08-13 15:06:36,363 [INFO] ============================================================
+2026-08-13 15:06:36,469 [INFO]   • customers: 2,000 linhas
+2026-08-13 15:06:36,477 [INFO]   • orders: 48,998 linhas
+2026-08-13 15:06:36,496 [INFO]   • order_items: 147,320 linhas
+2026-08-13 15:06:36,510 [INFO]   • payments: 53,546 linhas
+2026-08-13 15:06:36,514 [INFO] ------------------------------------------------------------
+2026-08-13 15:06:36,515 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-13 15:06:36,515 [INFO] ============================================================
+
+2026-08-13 15:06:36,551 [INFO] Conexão com o banco de dados encerrada.
+2026-08-13 15:07:05,205 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 15:07:05,303 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-13 15:07:05,312 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-13 15:07:05,336 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-13 15:07:05,363 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-13 15:07:05,398 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-13 15:07:05,417 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-13 15:07:05,938 [INFO] ✅ Tabela 'fiscal_invoices' populada com sucesso: 34,365 linhas.
+2026-08-13 15:07:05,963 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-13 15:07:05,991 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-13 15:07:06,007 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-13 15:07:07,439 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-13 15:07:08,551 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-13 15:07:09,253 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-13 15:07:09,274 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-13 15:07:09,307 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-13 15:07:09,331 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-13 15:07:09,373 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-13 15:07:09,421 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-13 15:07:09,438 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-13 15:07:09,466 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-13 15:07:09,503 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-13 15:07:12,013 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-13 15:07:12,043 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-13 15:07:12,079 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-13 15:07:12,079 [INFO] 
+============================================================
+2026-08-13 15:07:12,080 [INFO] EXECUTANDO VALIDACÃO DA QUESTÃO 3.2...
+2026-08-13 15:07:12,081 [INFO] ============================================================
+2026-08-13 15:07:12,166 [INFO]   • customers: 2,000 linhas
+2026-08-13 15:07:12,169 [INFO]   • orders: 48,998 linhas
+2026-08-13 15:07:12,179 [INFO]   • order_items: 147,320 linhas
+2026-08-13 15:07:12,183 [INFO]   • payments: 53,546 linhas
+2026-08-13 15:07:12,184 [INFO] ------------------------------------------------------------
+2026-08-13 15:07:12,184 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-13 15:07:12,185 [INFO] ============================================================
+
+2026-08-13 15:07:12,185 [INFO] Conexão com o banco de dados encerrada.
+2026-08-13 15:18:56,711 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-13 15:18:56,813 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-13 15:18:57,005 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-13 15:18:57,051 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-13 15:18:57,087 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-13 15:18:57,149 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-13 15:18:57,165 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-13 15:18:57,705 [INFO] ✅ Tabela 'fiscal_invoices' populada com sucesso: 34,365 linhas.
+2026-08-13 15:18:57,742 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-13 15:18:57,777 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-13 15:18:57,790 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-13 15:18:58,705 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-13 15:18:59,462 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-13 15:19:00,149 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-13 15:19:00,171 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-13 15:19:00,202 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-13 15:19:00,221 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-13 15:19:00,263 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-13 15:19:00,312 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-13 15:19:00,331 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-13 15:19:00,358 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-13 15:19:00,397 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-13 15:19:01,610 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-13 15:19:01,658 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-13 15:19:01,673 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-13 15:19:01,673 [INFO] 
+============================================================
+2026-08-13 15:19:01,673 [INFO] EXECUTANDO VALIDAÇÃO DA QUESTÃO 3.2...
+2026-08-13 15:19:01,673 [INFO] ============================================================
+2026-08-13 15:19:01,754 [INFO]   • customers: 2,000 linhas
+2026-08-13 15:19:01,758 [INFO]   • orders: 48,998 linhas
+2026-08-13 15:19:01,770 [INFO]   • order_items: 147,320 linhas
+2026-08-13 15:19:01,774 [INFO]   • payments: 53,546 linhas
+2026-08-13 15:19:01,774 [INFO] ------------------------------------------------------------
+2026-08-13 15:19:01,775 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-13 15:19:01,775 [INFO] ============================================================
+
+2026-08-13 15:19:01,775 [INFO] Conexão com o banco de dados encerrada.
+2026-08-16 21:55:20,637 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-16 21:55:20,964 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-16 21:55:20,980 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-16 21:55:21,014 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-16 21:55:21,081 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-16 21:55:21,171 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-16 21:55:21,191 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-16 21:55:21,971 [INFO] ✅ Tabela 'fiscal_invoices' populada com sucesso: 34,365 linhas.
+2026-08-16 21:55:22,035 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-16 21:55:22,078 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-16 21:55:22,093 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-16 21:55:23,168 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-16 21:55:23,942 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-16 21:55:24,688 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-16 21:55:24,720 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-16 21:55:24,767 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-16 21:55:24,786 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-16 21:55:24,850 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-16 21:55:24,957 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-16 21:55:24,999 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-16 21:55:25,023 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-16 21:55:25,084 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-16 21:55:26,646 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-16 21:55:26,663 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-16 21:55:26,704 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-16 21:55:26,706 [INFO] 
+============================================================
+2026-08-16 21:55:26,706 [INFO] EXECUTANDO VALIDAÇÃO DA QUESTÃO 3.2...
+2026-08-16 21:55:26,707 [INFO] ============================================================
+2026-08-16 21:55:26,936 [INFO]   • customers: 2,000 linhas
+2026-08-16 21:55:26,956 [INFO]   • orders: 48,998 linhas
+2026-08-16 21:55:26,980 [INFO]   • order_items: 147,320 linhas
+2026-08-16 21:55:26,991 [INFO]   • payments: 53,546 linhas
+2026-08-16 21:55:26,996 [INFO] ------------------------------------------------------------
+2026-08-16 21:55:26,997 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-16 21:55:26,997 [INFO] ============================================================
+
+2026-08-16 21:55:26,998 [INFO] Conexão com o banco de dados encerrada.
+2026-08-26 17:33:37,504 [INFO] Iniciando a carga bruta de 24 arquivos no PostgreSQL...
+2026-08-26 17:33:40,236 [INFO] ✅ Tabela 'addresses' populada com sucesso: 3,998 linhas.
+2026-08-26 17:33:40,304 [INFO] ✅ Tabela 'attributes' populada com sucesso: 8 linhas.
+2026-08-26 17:33:40,323 [INFO] ✅ Tabela 'brands' populada com sucesso: 12 linhas.
+2026-08-26 17:33:40,416 [INFO] ✅ Tabela 'categories' populada com sucesso: 14 linhas.
+2026-08-26 17:33:40,520 [INFO] ✅ Tabela 'customers' populada com sucesso: 2,000 linhas.
+2026-08-26 17:33:40,539 [INFO] ✅ Tabela 'employees' populada com sucesso: 15 linhas.
+2026-08-26 17:33:41,224 [INFO] ✅ Tabela 'fiscal_invoices' populada com sucesso: 34,365 linhas.
+2026-08-26 17:33:41,336 [INFO] ✅ Tabela 'goods_receipt_items' populada com sucesso: 4,733 linhas.
+2026-08-26 17:33:41,488 [INFO] ✅ Tabela 'goods_receipts' populada com sucesso: 1,548 linhas.
+2026-08-26 17:33:41,523 [INFO] ✅ Tabela 'locations' populada com sucesso: 6 linhas.
+2026-08-26 17:33:42,467 [INFO] ✅ Tabela 'order_items' populada com sucesso: 147,320 linhas.
+2026-08-26 17:33:43,237 [INFO] ✅ Tabela 'orders' populada com sucesso: 48,998 linhas.
+2026-08-26 17:33:44,044 [INFO] ✅ Tabela 'payments' populada com sucesso: 53,546 linhas.
+2026-08-26 17:33:44,160 [INFO] ✅ Tabela 'product_suppliers' populada com sucesso: 1,520 linhas.
+2026-08-26 17:33:44,240 [INFO] ✅ Tabela 'product_variants' populada com sucesso: 1,009 linhas.
+2026-08-26 17:33:44,270 [INFO] ✅ Tabela 'products' populada com sucesso: 500 linhas.
+2026-08-26 17:33:44,403 [INFO] ✅ Tabela 'purchase_order_items' populada com sucesso: 6,059 linhas.
+2026-08-26 17:33:44,682 [INFO] ✅ Tabela 'purchase_orders' populada com sucesso: 2,000 linhas.
+2026-08-26 17:33:44,780 [INFO] ✅ Tabela 'return_items' populada com sucesso: 1,384 linhas.
+2026-08-26 17:33:44,828 [INFO] ✅ Tabela 'returns' populada com sucesso: 980 linhas.
+2026-08-26 17:33:44,908 [INFO] ✅ Tabela 'stock_levels' populada com sucesso: 6,054 linhas.
+2026-08-26 17:33:46,121 [INFO] ✅ Tabela 'stock_movements' populada com sucesso: 115,312 linhas.
+2026-08-26 17:33:46,140 [INFO] ✅ Tabela 'suppliers' populada com sucesso: 25 linhas.
+2026-08-26 17:33:46,213 [INFO] ✅ Tabela 'variant_attribute_values' populada com sucesso: 2,018 linhas.
+2026-08-26 17:33:46,214 [INFO] 
+============================================================
+2026-08-26 17:33:46,214 [INFO] EXECUTANDO VALIDAÇÃO DA QUESTÃO 3.2...
+2026-08-26 17:33:46,214 [INFO] ============================================================
+2026-08-26 17:33:46,470 [INFO]   • customers: 2,000 linhas
+2026-08-26 17:33:46,475 [INFO]   • orders: 48,998 linhas
+2026-08-26 17:33:46,488 [INFO]   • order_items: 147,320 linhas
+2026-08-26 17:33:46,491 [INFO]   • payments: 53,546 linhas
+2026-08-26 17:33:46,492 [INFO] ------------------------------------------------------------
+2026-08-26 17:33:46,492 [INFO] 👉 SOMA TOTAL DAS 4 TABELAS (RESPOSTA Q3.2): 251,864 linhas
+2026-08-26 17:33:46,492 [INFO] ============================================================
+
+2026-08-26 17:33:46,492 [INFO] Conexão com o banco de dados encerrada.
