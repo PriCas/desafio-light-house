@@ -1,6 +1,5 @@
 PREPARAÇÃO DO AMBIENTE:
 
-
 As instruções a seguir mostram como o ambiente foi configurado, com 
 o objetivo de isolar as dependências do projeto LH Nautical.
 
@@ -12,8 +11,9 @@ NO POWERSHELL DO VS CODE
 ATIVAR (KILL TERMINAL E ACESSAR NOVAMENTE)	
 'venv\Scripts\activate'	
 
-IMPORTAR TESTAR PACOTE .MATH NO PYTHON
+IMPORTAR PACOTE .MATH NO PYTHON
 'import math'
+TESTAR  .math
 'math.sqrt(25)'
 
 IMPORTAR MÓDULO DATETIME PARA ANÁLISE DAS DATAS
