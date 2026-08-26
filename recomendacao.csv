@@ -1,0 +1,6 @@
+posicao,produto_referencia,product_id,produto_recomendado,description,score_similaridade
+1,Motor de Popa 1949,75,Vela Mestra 1913,Vela mestra em dacron para veleiros 32 pés,0.2452
+2,Motor de Popa 1949,187,asdf,Defensa cilíndrica em PVC,0.2308
+3,Motor de Popa 1949,295,Cabo Náutico 2105,Cabo de polipropileno trançado,0.23
+4,Motor de Popa 1949,408,Sonar Transducer 7193,Transdutor de sonar para profundidade,0.2265
+5,Motor de Popa 1949,311,GPS Plotter 2249,GPS chartplotter com cartografia,0.2148
