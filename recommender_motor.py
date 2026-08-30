@@ -2,7 +2,6 @@
 ===============================================================================
 LH NAUTICAL - PIPELINE DE ENGENHARIA E CIÊNCIA DE DADOS
 Questão: 7 Sistema de Recomendação (Similaridade de Cosseno)
-
 Descrição:
     Gera recomendações de produtos baseadas no histórico de compras dos clientes,
     utilizando a técnica de Filtragem Colaborativa Baseada em Itens.
