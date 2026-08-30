@@ -1,0 +1,20 @@
+# Isolar variáveis de ambiente e segredos
+.env
+*.env
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de dados pesados e temporários (CSV brutos da LH Nautical)
+lh_nautical_csv/
+*.csv
+*.sql
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+desktop.ini
+
