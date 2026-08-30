@@ -1,38 +1,70 @@
 """
 ===============================================================================
-LH NAUTICAL - 
+LH NAUTICAL - PIPELINE DE ENGENHARIA E CIÊNCIA DE DADOS
+Questão: 7 Sistema de Recomendação (Similaridade de Cosseno)
 
-Questão: 7 Sistema de recomendação
+Descrição:
+    Gera recomendações de produtos baseadas no histórico de compras dos clientes,
+    utilizando a técnica de Filtragem Colaborativa Baseada em Itens.
 
-
-Autor: Priscila Castaldo
+Autora: Priscila Castaldo
+Gemini 3.5
 ===============================================================================
 """
+
+import os
 import logging
 import numpy as np
 import pandas as pd
 import psycopg2
+from dotenv import load_dotenv
 from sklearn.metrics.pairwise import cosine_similarity
 
+# -----------------------------------------------------------------------------
+# 1. CONFIGURAÇÃO DE LOGS E VARIÁVEIS DE AMBIENTE (SEGURANÇA)
+# -----------------------------------------------------------------------------
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
+    level=logging.INFO, 
+    format="%(asctime)s [%(levelname)s] %(message)s"
 )
 
-# Configuração do PostgreSQL
-DB_CONFIG = {
-    "host": "localhost",
-    "port": "5432",
-    "dbname": "lh_nautical",
-    "user": "postgres",
-    "password": "senac",
-    "client_encoding": "utf8",
-}
+# Carrega as variáveis do arquivo .env (Removemos o DB_CONFIG hardcoded)
+load_dotenv()
+
+DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_PORT = os.getenv("DB_PORT", "5432")
+DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+
+if not all([DB_NAME, DB_USER, DB_PASSWORD]):
+    raise ValueError("ERRO CRÍTICO: Credenciais do banco não encontradas no .env.")
 
 PRODUTO_ALVO = "Motor de Popa 1949"
 
+# -----------------------------------------------------------------------------
+# 2. PADRONIZAÇÃO DA CONEXÃO
+# -----------------------------------------------------------------------------
+def conectar_banco():
+    """Estabelece a conexão com o PostgreSQL forçando a codificação UTF-8."""
+    try:
+        return psycopg2.connect(
+            host=DB_HOST,
+            port=DB_PORT,
+            database=DB_NAME,
+            user=DB_USER,
+            password=DB_PASSWORD,
+            client_encoding='UTF8'
+        )
+    except Exception as error:
+        logging.error(f"Falha de conexão com o banco: {error}")
+        raise error
 
+# -----------------------------------------------------------------------------
+# 3. EXTRAÇÃO DE DADOS (DATA ENGINEERING)
+# -----------------------------------------------------------------------------
 def carregar_interacoes():
-    """Carrega o histórico de compras únicas (Cliente x Produto)."""
+    """Carrega o histórico de compras (Cliente x Produto) ignorando cancelamentos."""
     query = """
         SELECT DISTINCT
             o.customer_id,
@@ -45,112 +77,93 @@ def carregar_interacoes():
         JOIN products p ON pv.product_id = p.id
         WHERE o.status NOT IN ('cancelled', 'draft');
     """
-    conn = psycopg2.connect(**DB_CONFIG)
+    
+    # Utiliza a função padronizada de conexão
+    conn = conectar_banco()
     df = pd.read_sql(query, conn)
     conn.close()
+    
     return df
 
-
+# -----------------------------------------------------------------------------
+# 4. SISTEMA DE RECOMENDAÇÃO (MACHINE LEARNING)
+# -----------------------------------------------------------------------------
 def executar_sistema_recomendacao():
     logging.info("Carregando interações de clientes e produtos...")
     df_interacoes = carregar_interacoes()
 
     if df_interacoes.empty:
-        logging.error("Nenhuma interação encontrada!")
+        logging.error("Nenhuma interação encontrada! Verifique o banco de dados.")
         return
 
-    # 1. Construção da Matriz Usuário x Produto (Linhas: Cliente, Colunas: Produto)
-    # Valor 1 se comprou ao menos uma vez, 0 caso contrário
-    logging.info(
-        "Construindo a Matriz Binária de Interação (Usuário x Produto)..."
-    )
+    # Passo A: Construção da Matriz Binária (One-Hot) de Interação
+    logging.info("Construindo a Matriz Binária de Interação (Usuário x Produto)...")
     matriz_usuario_produto = pd.crosstab(
         index=df_interacoes["customer_id"],
-        columns=df_interacoes["product_name"],
+        columns=df_interacoes["product_name"]
     ).map(lambda x: 1 if x > 0 else 0)
 
-    # Verificar se o produto alvo existe no catálogo
+    # Validação de integridade: O produto alvo existe nas vendas?
     if PRODUTO_ALVO not in matriz_usuario_produto.columns:
-        logging.error(
-            f"O produto '{PRODUTO_ALVO}' não foi encontrado no catálogo!"
-        )
+        logging.error(f"O produto '{PRODUTO_ALVO}' não possui histórico de vendas!")
         return
 
-    # 2. Cálculo da Similaridade de Cosseno entre os Vetores dos Produtos
-    # Transpomos a matriz para ter Produtos nas linhas e Clientes nas colunas
+    # Passo B: Transposição e Cálculo da Similaridade de Cosseno
+    # Transpomos (T) para que a similaridade seja calculada entre os PRODUTOS (linhas)
     matriz_produto_usuario = matriz_usuario_produto.T
-
+    
     logging.info("Calculando Similaridade de Cosseno entre Produtos...")
     matriz_similaridade = cosine_similarity(matriz_produto_usuario)
 
-    # Transformar em DataFrame para facilitar busca
     df_similaridade = pd.DataFrame(
         matriz_similaridade,
         index=matriz_produto_usuario.index,
         columns=matriz_produto_usuario.index,
     )
 
-    # 3. Ranking dos 5 produtos mais similares ao 'Motor de Popa 1949'
-    # Puxa a coluna do produto alvo, remove ele mesmo do ranking e pega os Top 5
+    # Passo C: Extração e Ranking do Top 5
     top_5_recomendacoes = (
         df_similaridade[PRODUTO_ALVO]
-        .drop(index=PRODUTO_ALVO)
+        .drop(index=PRODUTO_ALVO) # Remove o próprio produto da lista de recomendação
         .sort_values(ascending=False)
         .head(5)
     )
 
-    # Mapeamento auxiliar para resgatar ID e Descrição de cada produto
+    # Mapeamento auxiliar para resgatar IDs e Descrições para a apresentação
     info_produtos = (
         df_interacoes[["product_name", "product_id", "description"]]
         .drop_duplicates(subset=["product_name"])
         .set_index("product_name")
     )
 
-    # Exibição do Resultado Executivo
+    # Passo D: Exibição Executiva no Terminal
     print("\n" + "=" * 70)
-    print(
-        f"SISTEMA DE RECOMENDAÇÃO: VITRINE 'QUEM COMPROU ISSO, TAMBÉM LEVOU...'"
-    )
+    print(f"VITRINE: 'QUEM COMPROU ISSO, TAMBÉM LEVOU...'")
     print(f"ITEM DE REFERÊNCIA: {PRODUTO_ALVO}")
     print("=" * 70)
 
-    for i, (prod_nome, sim_score) in enumerate(
-        top_5_recomendacoes.items(), 1
-    ):
+    for i, (prod_nome, sim_score) in enumerate(top_5_recomendacoes.items(), 1):
         p_id = info_produtos.loc[prod_nome, "product_id"]
         p_desc = info_produtos.loc[prod_nome, "description"]
-        print(
-            f"  {i}º Lugar | ID: {p_id:4d} | Similaridade: {sim_score:.4f} | Produto: {prod_nome} | Descrição: {p_desc}"
-        )
+        print(f"  {i}º Lugar | ID: {p_id:4d} | Similaridade: {sim_score:.4f} | Produto: {prod_nome}")
 
     print("=" * 70 + "\n")
 
-    # =========================================================================
-    # 4. PREPARAÇÃO E EXPORTAÇÃO DO CSV PARA O LOOKER STUDIO
-    # =========================================================================
-    df_export = pd.DataFrame(
-        {
-            "posicao": range(1, len(top_5_recomendacoes) + 1),
-            "produto_referencia": PRODUTO_ALVO,
-            "product_id": [
-                info_produtos.loc[p, "product_id"]
-                for p in top_5_recomendacoes.index
-            ],
-            "produto_recomendado": top_5_recomendacoes.index,
-            "description": [
-                info_produtos.loc[p, "description"]
-                for p in top_5_recomendacoes.index
-            ],
-            "score_similaridade": top_5_recomendacoes.values.round(4),
-        }
-    )
+    # -------------------------------------------------------------------------
+    # 5. EXPORTAÇÃO PARA O DASHBOARD (POWER BI / LOOKER)
+    # -------------------------------------------------------------------------
+    df_export = pd.DataFrame({
+        "posicao": range(1, len(top_5_recomendacoes) + 1),
+        "produto_referencia": PRODUTO_ALVO,
+        "product_id": [info_produtos.loc[p, "product_id"] for p in top_5_recomendacoes.index],
+        "produto_recomendado": top_5_recomendacoes.index,
+        "description": [info_produtos.loc[p, "description"] for p in top_5_recomendacoes.index],
+        "score_similaridade": top_5_recomendacoes.values.round(4),
+    })
     
-    # Salva o arquivo CSV
-    df_export.to_csv("recomendacao.csv", index=False, encoding="utf-8")
-    logging.info(
-        f"🎉 Arquivo 'recomendacao.csv' exportado com sucesso com {len(df_export)} recomendações!"
-    )
-
+    nome_arquivo = "recomendacao.csv"
+    df_export.to_csv(nome_arquivo, index=False, encoding="utf-8")
+    logging.info(f"🎉 Arquivo '{nome_arquivo}' exportado com sucesso ({len(df_export)} recomendações)!")
 
 if __name__ == "__main__":
     executar_sistema_recomendacao()
